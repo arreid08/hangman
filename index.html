@@ -9,6 +9,67 @@
     <script src="js/script.js" defer></script>
 </head>
 <body>
-    
+    <h1>Hangman</h1>
+    <div class="buttons">
+        <button class="restart">Restart</button>
+        <button class="start">New Game</button>
+    </div>
+    <hr>
+    <div id="win">Congratulations! You guessed the correct word!</div>
+    <div id="lose">Sorry, try again!</div>
+    <div id="container">
+        <div id="turnsLeftBox">
+            <p id="turns">Turns Left:</p>
+            <p id="turnsLeft">7</p>
+        </div>
+        <div id="hangman">
+            <div id="empty">
+                <img src="images/0.jpg" alt="tree with noose">
+            </div>
+        </div>
+        <div class="puzzle"></div>
+        <div class="initialScreen">
+            <div class="begin">
+                <h3>Please enter your own word or choose a random word</h3>
+                <input id="input" placeholder="Your Word Here...">
+                <button id="submit">Submit</button>
+                <button id="random">Random</button>
+            </div>
+        </div>
+        <div class="alphabet">
+            <div class="vowels row">
+                <button class="letter" data-letter="a">a</button>
+                <button class="letter" data-letter="e">e</button>
+                <button class="letter" data-letter="i">i</button>
+                <button class="letter" data-letter="o">o</button>
+                <button class="letter" data-letter="u">u</button>
+                <button class="letter" data-letter="y">y</button>
+            </div>
+            <div class="consonantsRowOne row">
+                <button class="letter" data-letter="b">b</button>
+                <button class="letter" data-letter="c">c</button>
+                <button class="letter" data-letter="d">d</button>
+                <button class="letter" data-letter="f">f</button>
+                <button class="letter" data-letter="g">g</button>
+                <button class="letter" data-letter="h">h</button>
+                <button class="letter" data-letter="j">j</button>
+                <button class="letter" data-letter="k">k</button>
+                <button class="letter" data-letter="l">l</button>
+                <button class="letter" data-letter="m">m</button>
+            </div>
+            <div class="consonantsRowTwo row">
+                <button class="letter" data-letter="n">n</button>
+                <button class="letter" data-letter="p">p</button>
+                <button class="letter" data-letter="q">q</button>
+                <button class="letter" data-letter="r">r</button>
+                <button class="letter" data-letter="s">s</button>
+                <button class="letter" data-letter="t">t</button>
+                <button class="letter" data-letter="v">v</button>
+                <button class="letter" data-letter="w">w</button>
+                <button class="letter" data-letter="x">x</button>
+                <button class="letter" data-letter="z">z</button>
+            </div>
+        </div>
+    </div>  
 </body>
 </html>
