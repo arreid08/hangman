@@ -12,11 +12,27 @@
     <h1>Hangman</h1>
     <div class="buttons">
         <button class="restart">Restart</button>
-        <button class="start">New Game</button>
     </div>
     <hr>
-    <div id="win">Congratulations! You guessed the correct word!</div>
-    <div id="lose">Sorry, try again!</div>
+    <div id="winModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <a id="close" href="#">Close</a>
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                <p>Congratulations! You guessed the correct word!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="start" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+    <div id="loseModal" class="modal">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <p>Sorry, try again!</p>
+            <button class="start">New Game</button>
+        </div>
+    </div>
     <div id="container">
         <div id="turnsLeftBox">
             <p id="turns">Turns Left:</p>
@@ -70,6 +86,7 @@
                 <button class="letter" data-letter="z">z</button>
             </div>
         </div>
-    </div>  
+    </div> 
+    <hr> 
 </body>
 </html>

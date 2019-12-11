@@ -10,20 +10,22 @@ MVP
     Have all event listeners working for each letter.
     Have body parts appear each wrong guess.
     Have win logic completed when the guesses match the winning word.
-    Have lose event happen when chances run out.
-    Work on desktop and mobile.
+    Have lose modal appear when chances run out.
+    Disable buttons once used.
+    Display the correct letters on the lines provided.
     Display the moves you have left to make.
     Visual:
         Hangman stage with noose
         Basic shapes for the hangman
         Plain lines for the word to be guessed
-        Start Button
         Random Button
         Reset Button
 
 Post MVP
+    Have my site respond to mobile use.
     Add input box for the user to chose their own word.
-    Create a score count.  Attribute score to how many turns were taken.
+    Create a score count.  
+        Attribute score to how many turns were taken.
     Add a timer.
     Animate the pop-up box for win/lose versus an alert.
     Visual:

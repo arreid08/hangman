@@ -3,13 +3,8 @@
 // Code for Header Buttons:
 // SET variables for each button
 let restart = document.querySelector(".restart")
-let start = document.querySelector(".start")
 // SET event listeners for each button and what actions will happen.
-restart.addEventListener('click', (e) => {
-    if(confirm("Do you want to play again?")) {
-        location.reload()
-    }
-})
+restart.addEventListener('click', (e) => location.reload())
 
 // Code to toggle visibility:
 // SET variables for the keyboard and start screen blocks
@@ -24,7 +19,7 @@ let submit = document.querySelector("#submit")
 
 // SET an array of random words
 // SET randomWords as an empty string.
-let wordArray = ["candy", "Christmas", "friend", "chimpanzee", "giraffe"]
+let wordArray = ["candy", "christmas", "friend", "chimpanzee", "giraffe"]
 let randomWord = ''
 
 // SET a variable for the image tag.
@@ -34,6 +29,18 @@ let imageCount = 0
 // SET a variable for guesses
 let guesses = document.querySelector('#turnsLeft')
 let guessLeft = 7
+
+// SET a variable for correct letters
+let correctLetters = 0
+
+// SET a variable to combine the underlined spots with the index
+let position = document.querySelector("#underline")
+
+
+// SET the variable for the modal
+let winModal = document.querySelector("#winModal")
+let loseModal = document.querySelector("#loseModal")
+let close = document.querySelector("#close")
 
 
 // Select a random word when the random button has been pushed.
@@ -52,36 +59,7 @@ random.addEventListener('click', (e) => {
     startScreen.style.visibility = "hidden"
 })
 
-// FUNCTION checking for a match from the keyboard to the random word
-function checkMatch(letter) {
-    // console.log(letter)
-    // IF the button clicked matches a letter in the hidden word.
-    if (randomWord.includes(letter)) {
-        // THEN show the letter in all the necessary spaces.
 
-        console.log('it includes that letter')
-        // ELSE rotate through the images to show the hangman
-    } else {
-        console.log('wrong letter')
-        // SUBTRACT guesses by 1
-        guessLeft--
-        // console.log(guessLeft)
-        imageCount++
-        // console.log(imageCount)
-        // SET the main image to be the new image
-        images.src = `images/${imageCount}.jpg`
-        // IF guessLeft = 0 popup a box that shows you lost
-        if (guessLeft === 0){
-            // display a modal saying you lose.
-            console.log('you lose')
-            // break
-        }        
-        // DISPLAY new value for guessesLeft
-        guesses.innerText = guessLeft
-        // console.log(guesses.innerText)
-        // }
-    }
-}
 
 // Code for clicking on letters:
 // SET variable for keystroke
@@ -105,6 +83,56 @@ function buttons () {
     }
 }
 
+// FUNCTION checking for a match from the keyboard to the random word
+function checkMatch(letter) {
+    // console.log(letter)
+    // IF the button clicked matches a letter in the hidden word.
+    if (randomWord.includes(letter)) {
+        // THEN show the letter in all the necessary spaces.
+        // LOOP through the letters of the randomWord to see how many times that letter pops up
+        for (let i = 0; i < randomWord.length; i++) {
+            // IF the letter appears in the word
+            if(letter == randomWord[i]){
+                // THEN tally up the number of correct letters
+                correctLetters ++
+                // console.log(correctLetters)
+                // DETERMINE the location in the word that letter falls.
+                position = `#underline${i}`
+                // console.log(position)
+                // SET a variable for the new location
+                let location = document.querySelector(position)
+                // console.log(location)
+                location.innerText = letter
+                // IF the length of the randomWord is as long as the tally
+                if(randomWord.length === correctLetters){
+                    // DISPLAY a model to say you won!
+                    winModal.style.visibility = "visible"
+                }
+            }
+        }
+        // console.log('it includes that letter')
+        // ELSE rotate through the images to show the hangman
+    } else {
+        console.log('wrong letter')
+        // SUBTRACT guesses by 1
+        guessLeft--
+        // console.log(guessLeft)
+        imageCount++
+        // console.log(imageCount)
+        // SET the main image to be the new image
+        images.src = `images/${imageCount}.jpg`
+        // IF guessLeft = 0 popup a box that shows you lost
+        if (guessLeft === 0){
+            // display a modal saying you lose.
+            console.log('you lose')
+            // MODAL to show you lose.
+            loseModal.style.visibility = "visible"
+        }        
+        // DISPLAY new value for guessesLeft
+        guesses.innerText = guessLeft
+    }
+}
+
 buttons()
 
 
@@ -113,4 +141,6 @@ buttons()
 
 // Sources:
 // w3schools.com
-// https://css-tricks.com/snippets/javascript/select-random-item-array/ (used for the random word generator)
+// https://css-tricks.com/snippets/javascript/select-random-item-array/- used for the random word generator
+// https://www.w3schools.com/howto/howto_css_modals.asp - used for setting up my modal
+// https://css-tricks.com/considerations-styling-modal/ - modal styling
