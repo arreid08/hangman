@@ -28,10 +28,12 @@ let wordArray = ["candy", "Christmas", "friend", "chimpanzee", "giraffe"]
 let randomWord = ''
 
 // SET a variable for the image tag.
-let images = document.getElementsByTagName("img")
+let images = document.querySelector(".image")
+let imageCount = 0
 
 // SET a variable for guesses
 let guesses = document.querySelector('#turnsLeft')
+let guessLeft = 7
 
 
 // Select a random word when the random button has been pushed.
@@ -52,23 +54,32 @@ random.addEventListener('click', (e) => {
 
 // FUNCTION checking for a match from the keyboard to the random word
 function checkMatch(letter) {
-    console.log(letter)
+    // console.log(letter)
     // IF the button clicked matches a letter in the hidden word.
     if (randomWord.includes(letter)) {
         // THEN show the letter in all the necessary spaces.
 
         console.log('it includes that letter')
-        // ELSE add an image to the noose
+        // ELSE rotate through the images to show the hangman
     } else {
-        console.log('ernggg')
-        // LOOP through the images one at a time.
-        for (let i = 0; i < guesses; i++) {
-            // SET the main image to be the new image
-            images.src = "[i].jpg"
-            // SUBTRACT guesses by 1
-            guesses = guesses--
-        }
-        // MARK the letter as used by changing the color of the button
+        console.log('wrong letter')
+        // SUBTRACT guesses by 1
+        guessLeft--
+        // console.log(guessLeft)
+        imageCount++
+        // console.log(imageCount)
+        // SET the main image to be the new image
+        images.src = `images/${imageCount}.jpg`
+        // IF guessLeft = 0 popup a box that shows you lost
+        if (guessLeft === 0){
+            // display a modal saying you lose.
+            console.log('you lose')
+            // break
+        }        
+        // DISPLAY new value for guessesLeft
+        guesses.innerText = guessLeft
+        // console.log(guesses.innerText)
+        // }
     }
 }
 
@@ -82,7 +93,7 @@ function buttons () {
         // CREATE an event listener for when a letter is clicked
         chooseLetter[i].addEventListener('click', (e) => {
             let chosenLetter = e.target.textContent
-            console.log(e)
+            // console.log(e)
             // SEND the letter to the checkMatch function to COMPARE
             checkMatch(chosenLetter)
             // console.log(chosenLetter)
@@ -96,3 +107,10 @@ function buttons () {
 
 buttons()
 
+
+
+
+
+// Sources:
+// w3schools.com
+// https://css-tricks.com/snippets/javascript/select-random-item-array/ (used for the random word generator)
