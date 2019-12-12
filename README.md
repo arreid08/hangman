@@ -27,34 +27,34 @@ For this first project, I have decided to create the game of hangman using my sk
 
 #### MVP
 
--Have an array of words for the hangman game.
--Have all event listeners working for each letter.
--Have body parts appear each wrong guess.
--Have win logic completed when the guesses match the winning word.
--Have lose modal appear when chances run out.
--Disable buttons once used.
--Display the correct letters on the lines provided.
--Display the moves you have left to make.
--Visual:
---Hangman stage with noose
---Basic shapes for the hangman
---Plain lines for the word to be guessed
---Random Button
---Reset Button
+- Have an array of words for the hangman game.
+- Have all event listeners working for each letter.
+- Have body parts appear each wrong guess.
+- Have win logic completed when the guesses match the winning word.
+- Have lose modal appear when chances run out.
+- Disable buttons once used.
+- Display the correct letters on the lines provided.
+- Display the moves you have left to make.
+- Visual:
+-- Hangman stage with noose
+-- Basic shapes for the hangman
+-- Plain lines for the word to be guessed
+-- Random Button
+-- Reset Button
 
 #### Post MVP
 
--Have my site respond to mobile use.
--Add input box for the user to chose their own word.
--Create a score count.  
---Attribute score to how many turns were taken.
--Add a timer.
--Animate the pop-up box for win/lose versus an alert.
--Visual:
---Choose a theme for the game
---Update the background and the shapes for the hangman
---Fade out the a box and turn it into a letter when the player gets it right.
---Use an API for the random words.
+- Have my site respond to mobile use.
+- Add input box for the user to chose their own word.
+- Create a score count.  
+-- Attribute score to how many turns were taken.
+- Add a timer.
+- Animate the pop-up box for win/lose versus an alert.
+- Visual:
+-- Choose a theme for the game
+-- Update the background and the shapes for the hangman
+-- Fade out the a box and turn it into a letter when the player gets it right.
+-- Use an API for the random words.
 
 ## Functional Components
 
@@ -88,6 +88,13 @@ If you want to restart the game you can simply hit the restart button at the top
 ## Additional Libraries
 
 ## Code Snippet
+
+For me, I learned how to create Modal's with this project.  Here is my first modal in code:
+```
+winModal.style.visibility = "visible"
+                    winModal.querySelector(".close")
+                    .addEventListener('click', (e) => winModal.style.visibility = "hidden")
+```
 
 ## Change Log
 
