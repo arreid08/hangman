@@ -1,6 +1,6 @@
 # SEI - Project 1
 
-# Project Overview:
+# Project Overview
 
 ## Project Schedule
 
@@ -23,50 +23,71 @@ For this first project, I have decided to create the game of hangman using my sk
 
 ## Priority Matrix
 
-## MVP
+### MVP/PostMVP
 
-Have an array of words for the hangman game.
-Have all event listeners working for each letter.
-Have body parts appear each wrong guess.
-Have win logic completed when the guesses match the winning word.
-Have lose modal appear when chances run out.
-Disable buttons once used.
-Display the correct letters on the lines provided.
-Display the moves you have left to make.
-Visual:
-Hangman stage with noose
-Basic shapes for the hangman
-Plain lines for the word to be guessed
-Random Button
-Reset Button
+#### MVP
 
-## Post MVP
+-Have an array of words for the hangman game.
+-Have all event listeners working for each letter.
+-Have body parts appear each wrong guess.
+-Have win logic completed when the guesses match the winning word.
+-Have lose modal appear when chances run out.
+-Disable buttons once used.
+-Display the correct letters on the lines provided.
+-Display the moves you have left to make.
+-Visual:
+--Hangman stage with noose
+--Basic shapes for the hangman
+--Plain lines for the word to be guessed
+--Random Button
+--Reset Button
 
-Have my site respond to mobile use.
-Add input box for the user to chose their own word.
-Create a score count.  
- Attribute score to how many turns were taken.
-Add a timer.
-Animate the pop-up box for win/lose versus an alert.
-Visual:
-Choose a theme for the game
-Update the background and the shapes for the hangman
-Fade out the a box and turn it into a letter when the player gets it right.
-Use an API for the random words.
+#### Post MVP
 
-## Wireframes
+-Have my site respond to mobile use.
+-Add input box for the user to chose their own word.
+-Create a score count.  
+--Attribute score to how many turns were taken.
+-Add a timer.
+-Animate the pop-up box for win/lose versus an alert.
+-Visual:
+--Choose a theme for the game
+--Update the background and the shapes for the hangman
+--Fade out the a box and turn it into a letter when the player gets it right.
+--Use an API for the random words.
 
-## Game Components
+## Functional Components
 
-## Landing Page
+### Game Initialization
 
-Game Initialization
+Upon loading the page you can select the button to choose a random word from an array.
 
-Playing the Game
+### Playing the Game
 
-Winning the Game
+Once a random word have been selected, you will have a keyboard to use for selecting what letters you think are in the hidden word.
 
-Game Reset
+### Winning the Game
+
+If you can guess the word correctly, you win the game! If not, your man will be hung!
+
+### Game Reset
+
+If you want to restart the game you can simply hit the restart button at the top at anytime.
+
+### Time Commitment:
+
+| Component           | Priority | Estimated Time | Time Invested | Actual Time |
+| ------------------- | :------: | :------------: | :-----------: | :---------: |
+| Creating HTML       |    H     |      3hrs      |     2hrs      |    2hrs     |
+| Creating CSS        |    H     |      2hrs      |    1.5hrs     |   1.5hrs    |
+| Creating Javascript |    H     |     30hrs      |     20hrs     |    20hrs    |
+| CSS Clean-up        |    H     |      1hrs      |    1.5hrs     |   1.5hrs    |
+| Error Resolution    |    H     |      1hrs      |    1.5hrs     |   1.5hrs    |
+| Total               |    H     |     43hrs      |    26.5hrs    |   26.5hrs   |
+
+## Additional Libraries
+
+## Code Snippet
 
 ## Change Log
 
