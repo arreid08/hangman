@@ -76,7 +76,7 @@ If you can guess the word correctly, you win the game! If not, your man will be 
 
 ### Game Restart
 
-If you want to restart the game you can simply hit the restart button at the top at anytime.
+If you want to restart the game you can simply hit the restart button at the top at anytime.  This will refresh the webpage to initiate a new game.
 
 ### Time Commitment:
 
@@ -91,7 +91,6 @@ If you want to restart the game you can simply hit the restart button at the top
 
 ## Sources
 
-- [w3schools](https://www.w3schools.com)
 - [css-tricks](https://css-tricks.com/snippets/javascript/select-random-item-array/)
 - [w3schools-modals](https://www.w3schools.com/howto/howto_css_modals.asp)
 - [css-tricks](https://css-tricks.com/considerations-styling-modal/)
