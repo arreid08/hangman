@@ -36,11 +36,11 @@ For this first project, I have decided to create the game of hangman using my sk
 - Display the correct letters on the lines provided.
 - Display the moves you have left to make.
 - Visual:
- - Hangman stage with noose
- - Basic shapes for the hangman
- - Plain lines for the word to be guessed
- - Random Button
- - Restart Button
+    - Hangman stage with noose
+    - Basic shapes for the hangman
+    - Plain lines for the word to be guessed
+    - Random Button
+    - Restart Button
 
 #### Post MVP
 
@@ -52,10 +52,10 @@ For this first project, I have decided to create the game of hangman using my sk
 - Add a timer.
 - Animate the pop-up box for win/lose versus an alert.
 - Visual:
- - Update the stage to be a tree instead.
- - Update the shapes for the hangman to be more interesting than plain lines.
- - Fade out the a box and turn it into a letter when the player gets it right.
- - Use an API for the random words.
+    - Update the stage to be a tree instead.
+    - Update the shapes for the hangman to be more interesting than plain lines.
+    - Fade out the a box and turn it into a letter when the player gets it right.
+    - Use an API for the random words.
 
 ## Functional Components
 
