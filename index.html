@@ -13,24 +13,35 @@
     <div class="buttons">
         <button class="restart">Restart</button>
     </div>
+    <div id="restartModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>Are you sure you want to restart?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close">Restart</button>
+                </div>
+            </div>
+        </div>
     <hr>
     <div id="winModal" class="modal">
         <div class="modal-content">
             <div class="modal-body">
-                <a id="close" href="#">Close</a>
-                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
                 <p>Congratulations! You guessed the correct word!</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="start" data-dismiss="modal">Close</button>
+                <button type="button" class="close">Close</button>
             </div>
         </div>
     </div>
     <div id="loseModal" class="modal">
         <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <p>Sorry, try again!</p>
-            <button class="start">New Game</button>
+            <div class="modal-body">
+                <p>Sorry, try again!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="close">Close</button>
+            </div>
         </div>
     </div>
     <div id="container">
@@ -87,6 +98,5 @@
             </div>
         </div>
     </div> 
-    <hr> 
 </body>
 </html>

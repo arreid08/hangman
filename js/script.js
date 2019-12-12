@@ -4,7 +4,16 @@
 // SET variables for each button
 let restart = document.querySelector(".restart")
 // SET event listeners for each button and what actions will happen.
-restart.addEventListener('click', (e) => location.reload())
+restart.addEventListener('click', (e) => {
+    restartModal.style.visibility = "visible"
+    restartModal.querySelector(".close")
+    .addEventListener('click', (e) => {
+        restartModal.style.visibility = "hidden"
+        location.reload()
+    })
+    
+})
+
 
 // Code to toggle visibility:
 // SET variables for the keyboard and start screen blocks
@@ -40,7 +49,7 @@ let position = document.querySelector("#underline")
 // SET the variable for the modal
 let winModal = document.querySelector("#winModal")
 let loseModal = document.querySelector("#loseModal")
-let close = document.querySelector("#close")
+let close = document.querySelector(".close")
 
 
 // Select a random word when the random button has been pushed.
@@ -49,11 +58,11 @@ random.addEventListener('click', (e) => {
     document.getElementsByClassName(".puzzle").innerHTML = randomWord
     console.log(randomWord)
     for (let i = 0; i < randomWord.length; i++) {
-        let wordDiv = document.createElement('div')
-        wordDiv.id = 'underline'+[i]
-        wordDiv.className = 'underline'
-        // console.log('wordDiv', wordDiv)
-        document.querySelector('.puzzle').appendChild(wordDiv)
+        let wordSpan = document.createElement('span')
+        wordSpan.id = 'underline'+[i]
+        wordSpan.className = 'underline'
+        // console.log('wordSpan', wordSpan)
+        document.querySelector('.puzzle').appendChild(wordSpan)
     }
     keyboard.style.visibility = "visible"
     startScreen.style.visibility = "hidden"
@@ -107,13 +116,15 @@ function checkMatch(letter) {
                 if(randomWord.length === correctLetters){
                     // DISPLAY a model to say you won!
                     winModal.style.visibility = "visible"
+                    winModal.querySelector(".close")
+                    .addEventListener('click', (e) => winModal.style.visibility = "hidden")
                 }
             }
         }
         // console.log('it includes that letter')
         // ELSE rotate through the images to show the hangman
     } else {
-        console.log('wrong letter')
+        // console.log('wrong letter')
         // SUBTRACT guesses by 1
         guessLeft--
         // console.log(guessLeft)
@@ -124,14 +135,20 @@ function checkMatch(letter) {
         // IF guessLeft = 0 popup a box that shows you lost
         if (guessLeft === 0){
             // display a modal saying you lose.
-            console.log('you lose')
+            // console.log('you lose')
             // MODAL to show you lose.
             loseModal.style.visibility = "visible"
+            close.addEventListener('click', (e) => {
+                console.log(e)
+                loseModal.style.visibility = "hidden"
+            })
         }        
         // DISPLAY new value for guessesLeft
         guesses.innerText = guessLeft
     }
 }
+
+
 
 buttons()
 
