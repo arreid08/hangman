@@ -138,9 +138,10 @@ function checkMatch(letter) {
             // console.log('you lose')
             // MODAL to show you lose.
             loseModal.style.visibility = "visible"
-            close.addEventListener('click', (e) => {
-                console.log(e)
+            loseModal.querySelector(".close")
+            .addEventListener('click', (e) => {
                 loseModal.style.visibility = "hidden"
+                location.reload()
             })
         }        
         // DISPLAY new value for guessesLeft

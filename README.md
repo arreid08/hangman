@@ -36,11 +36,11 @@ For this first project, I have decided to create the game of hangman using my sk
 - Display the correct letters on the lines provided.
 - Display the moves you have left to make.
 - Visual:
--- Hangman stage with noose
--- Basic shapes for the hangman
--- Plain lines for the word to be guessed
--- Random Button
--- Reset Button
+ - Hangman stage with noose
+ - Basic shapes for the hangman
+ - Plain lines for the word to be guessed
+ - Random Button
+ - Reset Button
 
 #### Post MVP
 
@@ -51,10 +51,10 @@ For this first project, I have decided to create the game of hangman using my sk
 - Add a timer.
 - Animate the pop-up box for win/lose versus an alert.
 - Visual:
--- Choose a theme for the game
--- Update the background and the shapes for the hangman
--- Fade out the a box and turn it into a letter when the player gets it right.
--- Use an API for the random words.
+ - Choose a theme for the game
+ - Update the background and the shapes for the hangman
+ - Fade out the a box and turn it into a letter when the player gets it right.
+ - Use an API for the random words.
 
 ## Functional Components
 
@@ -91,9 +91,9 @@ If you want to restart the game you can simply hit the restart button at the top
 
 For me, I learned how to create Modal's with this project.  Here is my first modal in code:
 ```
-winModal.style.visibility = "visible"
-                    winModal.querySelector(".close")
-                    .addEventListener('click', (e) => winModal.style.visibility = "hidden")
+    winModal.style.visibility = "visible"
+    winModal.querySelector(".close")
+    .addEventListener('click', (e) => winModal.style.visibility = "hidden")
 ```
 
 ## Change Log

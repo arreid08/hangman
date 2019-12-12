@@ -87,7 +87,7 @@ h1 {
     display: grid;
     grid-column-gap: 20px;
     grid-row-gap: 10px;
-    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 2;
 }
 
@@ -98,6 +98,7 @@ h3 {
 }
 
 #submit, #random {
+    grid-column: 2;
     background-color: purple;
     color: white;
     border-radius: 5px;
@@ -172,17 +173,17 @@ img {
 
 .modal-footer {
     text-align: right;
+    margin: auto;
+    padding: 20px;
 }
 
 .close {
-    padding: 14px 18px;
-    background-color: #677996;
+    padding: 8px 12px;
+    background-color: purple;
     border: none;
     outline: none;
     border-radius: 3px;
     color: white;
     float: right;
-    font-size: 28px;
-    font-weight: bold;
     cursor: pointer;
 }
