@@ -40,19 +40,20 @@ For this first project, I have decided to create the game of hangman using my sk
  - Basic shapes for the hangman
  - Plain lines for the word to be guessed
  - Random Button
- - Reset Button
+ - Restart Button
 
 #### Post MVP
 
 - Have my site respond to mobile use.
 - Add input box for the user to chose their own word.
+- Add keydown functionality for keyboard.
 - Create a score count.  
--- Attribute score to how many turns were taken.
+- Attribute score to how many turns were taken.
 - Add a timer.
 - Animate the pop-up box for win/lose versus an alert.
 - Visual:
- - Choose a theme for the game
- - Update the background and the shapes for the hangman
+ - Update the stage to be a tree instead.
+ - Update the shapes for the hangman to be more interesting than plain lines.
  - Fade out the a box and turn it into a letter when the player gets it right.
  - Use an API for the random words.
 
@@ -61,16 +62,17 @@ For this first project, I have decided to create the game of hangman using my sk
 ### Game Initialization
 
 Upon loading the page you can select the button to choose a random word from an array.
+For the main page, I set up an image to start with for the place for the man to hang.  I also started with a Random button and a turn counter to be visible.  At the top, I have a headline and a restart button.  
 
 ### Playing the Game
 
-Once a random word have been selected, you will have a keyboard to use for selecting what letters you think are in the hidden word.
+Once a random word has been selected, you will have a keyboard to use for selecting what letters you think are in the hidden word.  I set up my code to respond to a mouse click on each button.  If the letter is in the random word, it will populate the letter in the correct spot/spots in the word.  If not, it will populate a portion of the man on the tree.  Through a series of IF/Else statements and a FOR loop I have accomplished this.
 
 ### Winning the Game
 
 If you can guess the word correctly, you win the game! If not, your man will be hung!
 
-### Game Reset
+### Game Restart
 
 If you want to restart the game you can simply hit the restart button at the top at anytime.
 
@@ -89,7 +91,7 @@ If you want to restart the game you can simply hit the restart button at the top
 
 ## Code Snippet
 
-For me, I learned how to create Modal's with this project.  Here is my first modal in code:
+I learned how to create Modal's with this project.  Here is my first modal in code:
 ```
     winModal.style.visibility = "visible"
     winModal.querySelector(".close")
