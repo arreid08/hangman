@@ -91,10 +91,10 @@ If you want to restart the game you can simply hit the restart button at the top
 
 ## Sources
 
-- ![w3schools](https://www.w3schools.com)
-- ![css-tricks](https://css-tricks.com/snippets/javascript/select-random-item-array/)
-- ![w3schools-modals](https://www.w3schools.com/howto/howto_css_modals.asp)
-- ![css-tricks](https://css-tricks.com/considerations-styling-modal/)
+- [w3schools](https://www.w3schools.com)
+- [css-tricks](https://css-tricks.com/snippets/javascript/select-random-item-array/)
+- [w3schools-modals](https://www.w3schools.com/howto/howto_css_modals.asp)
+- [css-tricks](https://css-tricks.com/considerations-styling-modal/)
 
 ## Code Snippet
 
