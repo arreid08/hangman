@@ -2,6 +2,8 @@
 
 # Project Overview
 
+My version of the classic game of hangman.
+
 ## Project Schedule
 
 | Day | Deliverable                                          | Status   |
@@ -87,7 +89,12 @@ If you want to restart the game you can simply hit the restart button at the top
 | Error Resolution    |    H     |      1hrs      |    1.5hrs     |   1.5hrs    |
 | Total               |    H     |     43hrs      |    26.5hrs    |   26.5hrs   |
 
-## Additional Libraries
+## Sources
+
+![w3schools] (https://www.w3schools.com)
+![css-tricks] (https://css-tricks.com/snippets/javascript/select-random-item-array/)
+![w3schools-modals] (https://www.w3schools.com/howto/howto_css_modals.asp)
+![css-tricks] (https://css-tricks.com/considerations-styling-modal/)
 
 ## Code Snippet
 
@@ -98,6 +105,13 @@ I learned how to create Modal's with this project.  Here is my first modal in co
     .addEventListener('click', (e) => winModal.style.visibility = "hidden")
 ```
 
-## Change Log
-
 ## Issues and Resolutions
+
+Some of my biggest issues were:
+CSS styling for the underlines.  I was able to work through it with Ali but my issue was that I hadn't styled the parent div of the code and was trying to center using the child div.  That didn't work at all.  Once I styled the parent it went right where I wanted it.
+
+Modals:
+With the modals, I had a few issues with getting the close button to work.  I realized I had given them all the same ID instead of classes, which was one issue. then I realize I hadn't correctly set up the click event on the close button.  Once I got that going I was able to use all three modals correctly and even added a page reload to two of them. 
+
+Functions:
+I had a hard time wrapping my head around calling a function in a function.  It was the first time doing this on my own and I had to spend sometime working it out.   Ultimately I worked with Kenny to get it going properly.
