@@ -33,7 +33,8 @@ For this first project, I have decided to create the game of hangman using my sk
 - Have all event listeners working for each letter.
 - Have body parts appear each wrong guess.
 - Have win logic completed when the guesses match the winning word.
-- Have lose modal appear when chances run out.
+- Have win alert appear when chances run out.
+- Have lose alert appear when chances run out.
 - Disable buttons once used.
 - Display the correct letters on the lines provided.
 - Display the moves you have left to make.
@@ -52,12 +53,12 @@ For this first project, I have decided to create the game of hangman using my sk
 - Create a score count.  
 - Attribute score to how many turns were taken.
 - Add a timer.
-- Animate the pop-up box for win/lose versus an alert.
+- Create a Modal for win/lose versus an alert.
+- Use an API for the random words.
 - Visual:
     - Update the stage to be a tree instead.
     - Update the shapes for the hangman to be more interesting than plain lines.
     - Fade out the a box and turn it into a letter when the player gets it right.
-    - Use an API for the random words.
 
 ## Functional Components
 
