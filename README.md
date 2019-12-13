@@ -3,7 +3,7 @@
 # Project Overview
 
 My version of the classic game of hangman.
-[Link-to-the-game](https://arreid08.github.io/hangman/)
+[https://arreid08.github.io/hangman/](https://arreid08.github.io/hangman/)
 
 ## Project Schedule
 
